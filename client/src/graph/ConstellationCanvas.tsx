@@ -66,6 +66,7 @@ export function ConstellationCanvas({
   const flashesRef = useRef<Map<string, number>>(new Map());
   const rootCountRef = useRef(0);
   const initializedRef = useRef(false);
+  const autoFitRef = useRef(true); // follow the whole universe until the user takes the wheel
   const hoverIdRef = useRef<string | null>(null);
   const [hoverId, setHoverId] = useState<string | null>(null);
 
@@ -242,6 +243,7 @@ export function ConstellationCanvas({
     }
 
     function onPointerDown(e: PointerEvent) {
+      autoFitRef.current = false;
       const rect = canvas.getBoundingClientRect();
       drag.active = true;
       drag.moved = false;
@@ -295,6 +297,7 @@ export function ConstellationCanvas({
 
     function onWheel(e: WheelEvent) {
       e.preventDefault();
+      autoFitRef.current = false;
       const rect = canvas.getBoundingClientRect();
       const sx = e.clientX - rect.left;
       const sy = e.clientY - rect.top;
@@ -331,6 +334,22 @@ export function ConstellationCanvas({
       }
 
       const cam = cameraRef.current;
+      if (autoFitRef.current && simNodesRef.current.size > 0) {
+        let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+        for (const n of simNodesRef.current.values()) {
+          minX = Math.min(minX, n.x ?? 0);
+          maxX = Math.max(maxX, n.x ?? 0);
+          minY = Math.min(minY, n.y ?? 0);
+          maxY = Math.max(maxY, n.y ?? 0);
+        }
+        const targetK = Math.min(
+          1.4,
+          0.85 * Math.min(w / (maxX - minX + 260), h / (maxY - minY + 260))
+        );
+        cam.x += ((minX + maxX) / 2 - cam.x) * 0.12;
+        cam.y += ((minY + maxY) / 2 - cam.y) * 0.12;
+        cam.k += (targetK - cam.k) * 0.12;
+      }
       const { selectedId, linkingFromId, staleMs } = liveRef.current;
       const focus = focusRef.current;
       const toScreen = (n: SimNode) => ({

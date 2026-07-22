@@ -17,7 +17,7 @@ import {
   votedNodeIds,
 } from "./db.js";
 
-const PORT = Number(process.env.PORT ?? 3001);
+const PORT = Number(process.env.API_PORT ?? 3001);
 const STALE_MS = Number(process.env.STALE_MS ?? 3 * 24 * 60 * 60 * 1000);
 
 const app = express();
