@@ -15,12 +15,14 @@ One living file. Every feature has a stable id (`R-001`, `R-002`, …) that chan
 | R-006 | Constellation minimap | Panning a universe of thousands of stars gets lost without an overview | — |
 | R-007 | Postgres instead of SQLite | SQLite serialises writers; a public deploy needs real concurrency and managed hosting | R-004 |
 | R-008 | Declare a supported Node version (`engines` + `.nvmrc`) | Node 22 to 24 silently broke the native SQLite binary (see R-002); this makes the requirement explicit at install time | — |
+| R-010 | Choose and add a LICENSE | Without one GitHub treats the repo as all-rights-reserved, which likely contradicts the intent of a collaborative writing project | A decision from the human |
 
 ## Done
 | ID | Feature | Finished | Notes |
 |---|---|---|---|
 | R-001 | Initial multiplayer MVP: story DAG API, constellation client, crossovers, votes, live updates | 2026-09-03 | Seeded demo universe of 12 nodes across 3 stories with 1 crossover |
 | R-002 | Fix `better-sqlite3` ABI mismatch after the Node 22 to 24 upgrade | 2026-09-03 | Upgraded to 13.0.3; verified typecheck, build, seed, API and WebSocket |
+| R-009 | README with captured screenshots | 2026-09-03 | Five shots in `docs/screenshots/`, taken against the seeded demo universe |
 
 ## Parked
 | ID | Feature | Parked on | Why | Revisit when |

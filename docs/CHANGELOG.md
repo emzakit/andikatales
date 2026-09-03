@@ -14,6 +14,15 @@ Entry format:
 
 ## Entries (newest first)
 
+## 2026-09-03 (R-009)
+
+### docs
+**Added:** `docs/screenshots/` — five PNGs captured from the running app (constellation, lineage trace, crossover weaving, crossover chapter, composer), about 1.7 MB total.
+
+**Changed:** README rewritten from a bare run-instructions file into the front door for the project: the premise, the three node kinds and what each colour means, lineage tracing, the crossover mechanic and its ancestor guard, quickstart, live-updates and DAG architecture notes, and the code layout. It now also states the Node 20+ requirement that R-002 exposed.
+
+**Decided:** capture screenshots with a throwaway `playwright-core` script driving the system Edge install, run from the scratchpad rather than the repo — because screenshots are a rare manual task and a browser automation stack is a heavy dependency to carry in `package.json` for it. Alternative considered: adding playwright as a devDependency with an `npm run shots` script (worth doing if screenshots start needing regular refreshes; not worth it for one pass).
+
 ## 2026-09-03 (R-002)
 
 ### server
