@@ -1,4 +1,4 @@
-<h1 align="center">✦ The Story So Far</h1>
+<h1 align="center">✦ Andika Tales</h1>
 
 <p align="center">
   <em>A massively multiplayer universe of branching stories.</em><br>
