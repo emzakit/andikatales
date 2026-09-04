@@ -104,4 +104,8 @@ client/src/
 
 ## Where it's going
 
-Planned and parked work lives in [docs/ROADMAP.md](docs/ROADMAP.md), with the reasoning behind past decisions in [docs/CHANGELOG.md](docs/CHANGELOG.md). Next up: moderation tooling, discovery feeds for the hottest threads and loneliest stars, and Postgres when this outgrows a single file.
+The reasoning behind past decisions lives in [docs/CHANGELOG.md](docs/CHANGELOG.md). Next up: moderation tooling, discovery feeds for the hottest threads and loneliest stars, and Postgres when this outgrows a single file.
+
+## License
+
+[MIT](LICENSE) — do what you like with it, just keep the copyright notice.

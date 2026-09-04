@@ -175,7 +175,7 @@ export default function App() {
       />
 
       <div className="hud">
-        <h1>The Story So Far</h1>
+        <h1>Andika Tales</h1>
         <div className="hud-stats">
           {nodes.size} stars · {links.length} threads
         </div>

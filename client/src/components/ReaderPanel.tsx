@@ -58,7 +58,7 @@ export function ReaderPanel({
     <aside className="reader">
       <header className="reader-header">
         <div>
-          <div className="reader-kicker">The story so far</div>
+          <div className="reader-kicker">The thread so far</div>
           <div className="reader-count">
             {lineage ? `${lineage.length} chapter${lineage.length === 1 ? "" : "s"}` : "tracing…"}
           </div>

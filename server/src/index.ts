@@ -123,5 +123,5 @@ app.post("/api/nodes/:id/vote", (req: AuthedRequest, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`The Story So Far — API listening on http://localhost:${PORT}`);
+  console.log(`Andika Tales — API listening on http://localhost:${PORT}`);
 });
