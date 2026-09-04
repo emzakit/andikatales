@@ -104,7 +104,7 @@ client/src/
 
 ## Where it's going
 
-The reasoning behind past decisions lives in [docs/CHANGELOG.md](docs/CHANGELOG.md). Next up: moderation tooling, discovery feeds for the hottest threads and loneliest stars, and Postgres when this outgrows a single file.
+Nowhere in particular — this started as an experiment. If it ever grows up: moderation tooling, discovery feeds for the hottest threads and loneliest stars, and Postgres when it outgrows a single file.
 
 ## License
 

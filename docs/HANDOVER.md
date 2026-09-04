@@ -20,7 +20,7 @@ Entry format:
 **Blocked:** nothing.
 **Next:** push to GitHub. `gh` still returns `HTTP 401: Bad credentials` — run `gh auth refresh -h github.com`, then `gh repo create andika-tales --public --source . --push`.
 **Open questions:** the working directory and git repo folder are still named `story-so-far`. Nothing depends on that name, so it is cosmetic, but the GitHub repo name is worth deciding deliberately when pushing.
-**Not in scope, noticed:** `docs/ROADMAP.md` was removed at the human's request, so the roadmap-id tags were stripped from the remaining entries. Commit messages from before the removal still cite R-002 and R-009; those are historical and were left alone. Still open: `engines` / `.nvmrc` for the Node 20+ requirement.
+**Not in scope, noticed:** `docs/ROADMAP.md` and `docs/CHANGELOG.md` were both removed at the human's request — this is a small experiment, not a program of work — so the roadmap-id tags were stripped from the remaining entries. Commit messages from before the removal still cite R-002 and R-009; those are historical and were left alone. Still open: `engines` / `.nvmrc` for the Node 20+ requirement.
 
 ## 2026-09-04 — README with captured screenshots
 **Done:** README rewritten as a proper front door — what the game is, the three node kinds, lineage tracing, crossovers, the composer, quickstart, architecture notes and code layout. Five screenshots captured from the running app against the seeded demo universe and committed to `docs/screenshots/`: the constellation, a traced five-chapter lineage, weaving a crossover, a crossover chapter in the reader, and the composer. All image paths verified to resolve.
