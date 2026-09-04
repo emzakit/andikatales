@@ -18,7 +18,7 @@ Entry format:
 **Done:** the app is now **Andika Tales** everywhere it is user-visible or published: browser title, the HUD heading, the API startup log, and the npm package names (`andika-tales`, `@andika/client`, `@andika/server`) with the lockfile regenerated. The reader panel kicker read "The story so far", which was the literal old app name, so it is now "The thread so far" — same meaning, no stale branding. All five screenshots were recaptured against the running app so none of them show the old name. Added an MIT `LICENSE` (Copyright 2026 Mundhir Werner, confirmed with the human) and a `license` field in the root manifest, with a License section in the README. Verified: both workspaces typecheck, the client production build succeeds, and both servers come up under the new name.
 **Half-done:** none.
 **Blocked:** nothing.
-**Next:** push to GitHub. `gh` still returns `HTTP 401: Bad credentials` — run `gh auth refresh -h github.com`, then `gh repo create andika-tales --public --source . --push`.
+**Next:** push. The repo now exists at https://github.com/emzakit/andikatales and `origin` is wired up; local `main` is ahead by three commits.
 **Open questions:** the working directory and git repo folder are still named `story-so-far`. Nothing depends on that name, so it is cosmetic, but the GitHub repo name is worth deciding deliberately when pushing.
 **Not in scope, noticed:** `docs/ROADMAP.md` and `docs/CHANGELOG.md` were both removed at the human's request — this is a small experiment, not a program of work — so the roadmap-id tags were stripped from the remaining entries. Commit messages from before the removal still cite R-002 and R-009; those are historical and were left alone. Still open: `engines` / `.nvmrc` for the Node 20+ requirement.
 
